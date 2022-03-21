@@ -25,7 +25,20 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 "Comment Mappings
-"<leader>cc --> comment
-"<leader>cu --> umcomment
+"<leader>cc 
+"<leader>cu 
 "Cheatsheet Mappings
-map <silent> <F1> :Cheatsheet <CR>  
+map <silent> <F1> :Cheatsheet <CR> 
+
+"Diagnostics Keybindings
+nmap <leader>tlu <Plug>(toggle-lsp-diag-underline)
+nmap <leader>tls <Plug>(toggle-lsp-diag-signs)
+nmap <leader>tlv <Plug>(toggle-lsp-diag-vtext)
+nmap <leader>tlp <Plug>(toggle-lsp-diag-update_in_insert)
+
+nmap <leader>tld  <Plug>(toggle-lsp-diag)
+nmap <leader>tldd <Plug>(toggle-lsp-diag-default)
+nmap <leader>tldo <Plug>(toggle-lsp-diag-off)
+nmap <leader>tldf <Plug>(toggle-lsp-diag-on)
+ 
+

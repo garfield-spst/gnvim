@@ -70,77 +70,31 @@ set showtabline
 "Auto-format using prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
 
-"Gui Settings
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Theming
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"highlight Normal           guifg=#dfdfdf guibg=#282c34 
-"highlight LineNr           guifg=#5b6268 guibg=#282c34 
-"highlight CursorLineNr     guifg=#202328 guifg=#5b6268 
-"highlight VertSplit        guifg=#1c1f24 guifg=#5b6268 
-"highlight Statement        guifg=#98be65 guibg=none    
-"highlight Directory        guifg=#51afef guibg=none    
-"highlight StatusLine       guifg=#202328 guifg=#5b6268 
-"highlight StatusLineNC     guifg=#202328 guifg=#5b6268 
-"highlight NERDTreeClosable guifg=#98be65 
-"highlight NERDTreeOpenable guifg=#5b6268 
-"highlight Comment          guifg=#51afef guibg=none    
-"highlight Constant         guifg=#3071db guibg=none    
-"highlight Special          guifg=#51afef guibg=none    
-"highlight Identifier       guifg=#5699af guibg=none    
-"highlight PreProc          guifg=#c678dd guibg=none    
-"highlight String           guifg=#3071db guibg=none    
-"highlight Number           guifg=#ff6c6b guibg=none    
-"highlight Function         guifg=#ff6c6b guibg=none    
-"highlight Visual           guifg=#dfdfdf guibg=#1c1f24 
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
 
-" highlight WildMenu         ctermfg=0       ctermbg=80      cterm=none
-" highlight Folded           ctermfg=103     ctermbg=234     cterm=none
-" highlight FoldColumn       ctermfg=103     ctermbg=234     cterm=none
-" highlight DiffAdd          ctermfg=none    ctermbg=23      cterm=none
-" highlight DiffChange       ctermfg=none    ctermbg=56      cterm=none
-" highlight DiffDelete       ctermfg=168     ctermbg=96      cterm=none
-" highlight DiffText         ctermfg=0       ctermbg=80      cterm=none
-" highlight SignColumn       ctermfg=244     ctermbg=235     cterm=none
-" highlight Conceal          ctermfg=251     ctermbg=none    cterm=none
-" highlight SpellBad         ctermfg=168     ctermbg=none    cterm=underline
-" highlight SpellCap         ctermfg=80      ctermbg=none    cterm=underline
-" highlight SpellRare        ctermfg=121     ctermbg=none    cterm=underline
-" highlight SpellLocal       ctermfg=186     ctermbg=none    cterm=underline
-" highlight Pmenu            ctermfg=251     ctermbg=234     cterm=none
-" highlight PmenuSel         ctermfg=0       ctermbg=111     cterm=none
-" highlight PmenuSbar        ctermfg=206     ctermbg=235     cterm=none
-" highlight PmenuThumb       ctermfg=235     ctermbg=206     cterm=none
-" highlight TabLine          ctermfg=244     ctermbg=234     cterm=none
-" highlight TablineSel       ctermfg=0       ctermbg=247     cterm=none
-" highlight TablineFill      ctermfg=244     ctermbg=234     cterm=none
-" highlight CursorColumn     ctermfg=none    ctermbg=236     cterm=none
-" highlight CursorLine       ctermfg=none    ctermbg=236     cterm=none
-" highlight ColorColumn      ctermfg=none    ctermbg=236     cterm=none
-" highlight Cursor           ctermfg=0       ctermbg=5       cterm=none
-" highlight htmlEndTag       ctermfg=114     ctermbg=none    cterm=none
-" highlight xmlEndTag        ctermfg=114     ctermbg=none    cterm=none
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 
-"set guioptions-=m  "remove menu bar
-"set guioptions-=T  "remove toolbar
-"set guioptions-=r  "remove right-hand scroll bar
-"set guioptions-=L  "remove left-hand scroll bar
-"set guifont=SauceCodePro\ Nerd\ Font:h15
-"set guifont=Mononoki\ Nerd\ Font:h15
-"set guifont=JetBrains\ Mono:h15
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
 
-"let g:nvui_transparency=0.85
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 
-"" Other configuration
-"if exists('g:nvui')
-  "" Configure nvui
-  "NvuiCmdFontFamily SauceCodePro
-  "NvuiCmdFontSize 25.0
-  "NvuiScrollAnimationDuration 0.2
-"endif
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
 
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 
 

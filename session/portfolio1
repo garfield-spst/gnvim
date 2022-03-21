@@ -10,7 +10,6 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd Projects/Website
 argglobal
 enew
 setlocal fdm=manual
@@ -23,7 +22,6 @@ setlocal fdn=20
 setlocal fen
 lcd ~/
 tabnext 1
-badd +1 ~/Projects/Website
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
